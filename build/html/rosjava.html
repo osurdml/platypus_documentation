@@ -1,0 +1,291 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Implementation of ROS Java on the Sami-Crw Software &mdash; Platypus Lutra 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Platypus Lutra 1.0 documentation" href="index.html"/>
+        <link rel="prev" title="Setup and launch of the sami-crw software" href="software.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Platypus Lutra
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="software.html">Setup and launch of the sami-crw software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="software.html#installing-the-software">Installing the Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software.html#starting-the-boat">Starting the boat:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software.html#launching-the-sami-crw-software-and-connecting-the-boat">Launching the Sami-Crw software and Connecting the Boat:</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Implementation of ROS Java on the Sami-Crw Software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installing-rosjava">Installing ROSJava</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#importing-packages-into-netbeans">Importing Packages into Netbeans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#test-the-rosjava-coupled-sami-crw-software">Test the ROSJava coupled Sami-crw software</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Platypus Lutra</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Implementation of ROS Java on the Sami-Crw Software</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/rosjava.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="implementation-of-ros-java-on-the-sami-crw-software">
+<h1>Implementation of ROS Java on the Sami-Crw Software<a class="headerlink" href="#implementation-of-ros-java-on-the-sami-crw-software" title="Permalink to this headline">¶</a></h1>
+<p>First ensure you are running the Java JDK 8 on Netbeans. The following instructions are assuming the original software package (from: <a class="reference external" href="https://github.com/nbbrooks">https://github.com/nbbrooks</a> ) is successfully installed and compiled on Netbeans (per the installation tutorial).</p>
+<p>The next step is to import into Netbeans as a new project the revised code with the ROSJava functionality added to it. This code can be found on <a class="reference external" href="https://github.com/nrjl/sami-crw/tree/ROScomms">https://github.com/nrjl/sami-crw/tree/ROScomms</a>.</p>
+<div class="section" id="installing-rosjava">
+<h2>Installing ROSJava<a class="headerlink" href="#installing-rosjava" title="Permalink to this headline">¶</a></h2>
+<p>Install ROSJava onto the host computer. The lab currently uses ROS Indigo on Ubuntu 14.04. If you do not have ROS, you must first install it in order to get ROSJava. See: <a class="reference external" href="http://wiki.ros.org/indigo/Installation/Ubuntu">http://wiki.ros.org/indigo/Installation/Ubuntu</a> for the ROS installation instructions.</p>
+<p>Once you have ROS installed, or have checked that it was installed previously and you are running Indigo, you may now install ROSJava. See: <a class="reference external" href="http://wiki.ros.org/rosjava/Tutorials/indigo/Installation">http://wiki.ros.org/rosjava/Tutorials/indigo/Installation</a> for instructions for installing ROSJava. Select the “Source” install option, as this will later allow you to import ROSJava packages into Netbeans.</p>
+</div>
+<div class="section" id="importing-packages-into-netbeans">
+<h2>Importing Packages into Netbeans<a class="headerlink" href="#importing-packages-into-netbeans" title="Permalink to this headline">¶</a></h2>
+<p>In Netbeans, in the sami-crw folder in the ‘Project’ tab, select ‘Libraries’. Right click on ‘Libraries’ and select ‘ADD JAR/Folder..’. This will open to a new screen where you can select which JAR files to import to Netbeans. Navigate to the folder where you have stored all ROSJava files.
+The folder which will contain the necessary JAR files for the standard ROSJava edition is:
+/rosjava/src/rocon_rosjava_core/master_info/build/install/master_info/lib</p>
+<p>Import all the JAR files in this folder:</p>
+<ul class="simple">
+<li>actionlib_msgs-1.11.8.jar</li>
+<li>apache_xmlrpc_client-0.2.1.jar</li>
+<li>apache_xmlrpc_common-0.2.1.jar</li>
+<li>apache_xmlrpc_server-0.2.1.jar</li>
+<li>commons-pool-1.6.jar</li>
+<li>com.springsource.org.apache.commons.codec-1.3.0.jar</li>
+<li>com.springsource.org.apache.commons.httpclient-3.1.0.jar</li>
+<li>com.springsource.org.apache.commons.io-1.4.0.jar</li>
+<li>com.springsource.org.apache.commons.lang-2.4.0.jar</li>
+<li>com.springsource.org.apache.commons.logging-1.1.1.jar</li>
+<li>com.springsource.org.apache.commons.net-2.0.0.jar</li>
+<li>dnsjava-2.1.1.jar</li>
+<li>geometry_msgs-1.11.8.jar</li>
+<li>gradle_plugins-0.2.1.jar</li>
+<li>guava-12.0.jar</li>
+<li>jsr305-1.3.9.jar</li>
+<li>junit-3.8.2.jar</li>
+<li>master_info-0.2.0.jar</li>
+<li>message_generation-0.2.1.jar</li>
+<li>nav_msgs-1.11.8.jar</li>
+<li>netty-3.5.2.Final.jar</li>
+<li>rocon_service_pair_msgs-0.7.10.jar</li>
+<li>rocon_std_msgs-0.7.10.jar</li>
+<li>rosgraph_msgs-1.11.1.jar</li>
+<li>rosjava-0.2.1.jar</li>
+<li>rosjava_test_msgs-0.2.1.jar</li>
+<li>rosjava_utils-0.2.0.jar</li>
+<li>std_msgs-0.5.9.jar</li>
+<li>tf2_msgs-0.5.11.jar</li>
+<li>uuid_msgs-1.0.5.jar</li>
+<li>ws-commons-util-1.0.1.jar</li>
+<li>xml-apis-1.0.b2.jar</li>
+</ul>
+<p>Our code utilizes a message package, which does not come automatically with the standard ROSJava installation. You must retrieve this package in order to get the geography messages JAR into Netbeans.</p>
+<p>First to get the package, in a new terminal window, run:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ sudo apt-get install ros-indigo-geographic-info
+</pre></div>
+</div>
+<p>Then you need to generate the rosjava versions of those messages. You need genjava:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ sudo apt-get install ros-indigo-genjava
+</pre></div>
+</div>
+<p>To publish a waypoint you need to first load the messages by sourcing the java setup bash:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ source ~/rosjava/devel/setup.bash
+</pre></div>
+</div>
+<p>Then naviage to rosjava folder (wherever it is on your computer):</p>
+<div class="highlight-python"><div class="highlight"><pre>$ cd ~/rosjava
+$ genjava_message_artifacts --verbose
+</pre></div>
+</div>
+<p>That should make a bunch of messages.</p>
+<p>To import the geography messages JAR into Netbeans, following the same method as before, in the sami-crw folder in the ‘Project’ tab, select ‘Libraries’. Right click on ‘Libraries’ and select ‘ADD JAR/Folder..’. This will open to a new screen where you can select which JAR files to import to Netbeans. Then navigate to the following:
+/rosjava/build/geographic_msgs/build/libs</p>
+<p>Import the following JAR file:</p>
+<ul class="simple">
+<li>geographic_msgs-0.4.0.jar</li>
+</ul>
+</div>
+<div class="section" id="test-the-rosjava-coupled-sami-crw-software">
+<h2>Test the ROSJava coupled Sami-crw software<a class="headerlink" href="#test-the-rosjava-coupled-sami-crw-software" title="Permalink to this headline">¶</a></h2>
+<p>To test the functionality of the code, run the application in Netbeans. MAKE SURE THAT A ROSCORE IS RUNNING IN A TERMINAL WINDOW. (To run a roscore, simply open a new terminal window and type “roscore” at the command line.)</p>
+<p>Once the application has launched and you have the roscore running in the terminal, in the Mission Monitor, select the “Add Simulated Boat” plan and hit the “Run” button. Add a SINGLE simulated boat at any point on the map of Waverly Lake. NOTE: You must make sure to change the “Number of boats” field to 1 from the default of 3.</p>
+<p>First check that the Publisher and Subscriber node have been declared and instantiated. To do this, open a new tab in terminal and run: rostopic list
+You should see the following:
+/crw_waypoint_sub
+/crw_geopose_pub
+/clear_waypoints
+/rosout
+/rousout_agg</p>
+<p>Then try in a terminal window:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ rostopic pub -1 /crw_waypoint_sub geographic_msgs/GeoPose
+&#39;{position: {latitude: 44.642, longitude: -123.065, altitude: 0.0}, orientation:
+{x: 0.0, y: 0.0, z: 0.0, w: 1.0}}&#39;
+</pre></div>
+</div>
+<p>This should publish 1 message of type GeoPose to the /crw_waypoint_sub topic.</p>
+<p>To clear this waypoint, type the following:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ rostopic pub -1 /clear_waypoints std_msgs/String ‘clear’
+</pre></div>
+</div>
+<p>This will publish 1 message of type String to the /clear_waypoints topic. It will stop the boat on its course to the current waypoint.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="software.html" class="btn btn-neutral" title="Setup and launch of the sami-crw software" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, RDML.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
