@@ -74,8 +74,8 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="software.html">Setup and launch of the sami-crw software</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="software.html#installing-the-software">Installing the Software</a></li>
-<li class="toctree-l2"><a class="reference internal" href="software.html#starting-the-boat">Starting the boat:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="software.html#launching-the-sami-crw-software-and-connecting-the-boat">Launching the Sami-Crw software and Connecting the Boat:</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="software.html#starting-the-boat">Starting the boat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software.html#launching-the-sami-crw-software-and-connecting-the-boat">Launching the Sami-Crw software and Connecting the Boat</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -126,7 +126,23 @@
   <div class="section" id="implementation-of-ros-java-on-the-sami-crw-software">
 <h1>Implementation of ROS Java on the Sami-Crw Software<a class="headerlink" href="#implementation-of-ros-java-on-the-sami-crw-software" title="Permalink to this headline">¶</a></h1>
 <p>First ensure you are running the Java JDK 8 on Netbeans. The following instructions are assuming the original software package (from: <a class="reference external" href="https://github.com/nbbrooks">https://github.com/nbbrooks</a> ) is successfully installed and compiled on Netbeans (per the installation tutorial).</p>
-<p>The next step is to import into Netbeans as a new project the revised code with the ROSJava functionality added to it. This code can be found on <a class="reference external" href="https://github.com/nrjl/sami-crw/tree/ROScomms">https://github.com/nrjl/sami-crw/tree/ROScomms</a>.</p>
+<p>You will want to create a new directory for the ROSJava project. Copy into it the sami-core and sami-dreaam folders from the original. (from: <a class="reference external" href="https://github.com/nbbrooks">https://github.com/nbbrooks</a>).</p>
+<p>Now you must add the updated sami-crw code to the same directory where you saved the sami-core and sami-dreaam files.</p>
+<p>This code can be found on <a class="reference external" href="https://github.com/nrjl/sami-crw/tree/ROScomms">https://github.com/nrjl/sami-crw/tree/ROScomms</a>.</p>
+<blockquote>
+<div><p>If you have git installed on your machine you can do this with the command:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ git clone https://github.com/nrjl/sami-crw.git
+</pre></div>
+</div>
+</div></blockquote>
+<p>The next step is to import into Netbeans as a new project the revised code with the ROSJava functionality added to it. As with the original software, you will need to update the &#8216;run&#8217; properties of the sami-crw to the following:</p>
+<blockquote>
+<div><p>The main class:
+sami.ui.MissionMonitor</p>
+<p>The VM options:
+-Djava.util.logging.config.file=&#8221;logging.properties&#8221; -Djava.library.path=lib/input</p>
+<p>NOTE: To change the &#8216;run&#8217; setup of the program in Netbeans, select the sami-crw project on the main projects window, right click and select &#8216;Properties.&#8217; This will open a new dialogue box. On the menu in this box, select &#8216;Run.&#8217; Use the above parameters to configure the run setup.</p>
+</div></blockquote>
 <div class="section" id="installing-rosjava">
 <h2>Installing ROSJava<a class="headerlink" href="#installing-rosjava" title="Permalink to this headline">¶</a></h2>
 <p>Install ROSJava onto the host computer. The lab currently uses ROS Indigo on Ubuntu 14.04. If you do not have ROS, you must first install it in order to get ROSJava. See: <a class="reference external" href="http://wiki.ros.org/indigo/Installation/Ubuntu">http://wiki.ros.org/indigo/Installation/Ubuntu</a> for the ROS installation instructions.</p>
@@ -185,7 +201,7 @@ The folder which will contain the necessary JAR files for the standard ROSJava e
 <div class="highlight-python"><div class="highlight"><pre>$ source ~/rosjava/devel/setup.bash
 </pre></div>
 </div>
-<p>Then naviage to rosjava folder (wherever it is on your computer):</p>
+<p>Then navigate to rosjava folder (wherever it is on your computer):</p>
 <div class="highlight-python"><div class="highlight"><pre>$ cd ~/rosjava
 $ genjava_message_artifacts --verbose
 </pre></div>

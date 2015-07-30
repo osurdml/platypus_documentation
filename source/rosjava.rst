@@ -3,7 +3,25 @@ Implementation of ROS Java on the Sami-Crw Software
 
 First ensure you are running the Java JDK 8 on Netbeans. The following instructions are assuming the original software package (from: https://github.com/nbbrooks ) is successfully installed and compiled on Netbeans (per the installation tutorial).
 
-The next step is to import into Netbeans as a new project the revised code with the ROSJava functionality added to it. This code can be found on https://github.com/nrjl/sami-crw/tree/ROScomms.
+You will want to create a new directory for the ROSJava project. Copy into it the sami-core and sami-dreaam folders from the original. (from: https://github.com/nbbrooks).
+
+Now you must add the updated sami-crw code to the same directory where you saved the sami-core and sami-dreaam files. 
+
+This code can be found on https://github.com/nrjl/sami-crw/tree/ROScomms.
+
+    If you have git installed on your machine you can do this with the command::
+
+    $ git clone https://github.com/nrjl/sami-crw.git
+
+The next step is to import into Netbeans as a new project the revised code with the ROSJava functionality added to it. As with the original software, you will need to update the 'run' properties of the sami-crw to the following:
+
+    The main class: 
+    sami.ui.MissionMonitor
+
+    The VM options:
+    -Djava.util.logging.config.file="logging.properties" -Djava.library.path=lib/input
+
+    NOTE: To change the 'run' setup of the program in Netbeans, select the sami-crw project on the main projects window, right click and select 'Properties.' This will open a new dialogue box. On the menu in this box, select 'Run.' Use the above parameters to configure the run setup. 
 
 Installing ROSJava
 ------------------
@@ -68,7 +86,7 @@ To publish a waypoint you need to first load the messages by sourcing the java s
 
 $ source ~/rosjava/devel/setup.bash
 
-Then naviage to rosjava folder (wherever it is on your computer)::
+Then navigate to rosjava folder (wherever it is on your computer)::
 
 $ cd ~/rosjava
 $ genjava_message_artifacts --verbose
