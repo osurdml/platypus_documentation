@@ -122,7 +122,6 @@ Then try in a terminal window::
   '{position: {latitude: 44.642, longitude: -123.065, altitude: 0.0}, orientation: 
   {x: 0.0, y: 0.0, z: 0.0, w: 1.0}}'
 
-
 This should publish 1 message of type GeoPose to the /crw_waypoint_sub topic.
 
 To clear this waypoint, type the following::
