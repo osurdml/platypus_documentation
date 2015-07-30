@@ -38,7 +38,7 @@ Installing the Software
     sami.ui.MissionMonitor
 
     The VM options:
-    -Djava.util.logging.config.file="logging.properties" -Djava.library.path=../sami-crw/lib/input -Xms1000m
+    -Djava.util.logging.config.file="logging.properties" -Djava.library.path=lib/input
 
     NOTE: To change the 'run' setup of the program in Netbeans, select the sami-crw project on the main projects window, right click and select 'Properties.' This will open a new dialogue box. On the menu in this box, select 'Run.' Use the above parameters to configure the run setup. 
 
