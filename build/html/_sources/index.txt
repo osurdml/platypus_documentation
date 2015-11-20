@@ -16,6 +16,7 @@ The main documentation for the site is organized into a couple sections:
    :caption: User Documentation
 
    software
+   sensors
    rosjava
 
 
