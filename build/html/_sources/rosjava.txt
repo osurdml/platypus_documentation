@@ -138,6 +138,7 @@ Python Code
 -----------
 
 There is some simple python code demonstrating use of the ROS messages available by cloning::
-git clone https://github.com/nrjl/ros_lutra.git
+
+$ git clone https://github.com/nrjl/ros_lutra.git
 
 The simplest example code is in scripts/box_waypoints.py. This code just runs a loop that allows a user to send the robot a set of four waypoints forming 20m box from its current position, or cancel the current waypoint or all waypoints. The sonar_plot.py code uses data from the sonar to create ROS marker messages to plot sonar returns so that you can use RVIZ to visualise the robot and sonar.
