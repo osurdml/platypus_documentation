@@ -33,7 +33,7 @@ Once you have ROS installed, or have checked that it was installed previously an
 Importing Packages into Netbeans
 --------------------------------
 
-In Netbeans, in the sami-crw folder in the ‘Project’ tab, select ‘Libraries’. Right click on ‘Libraries’ and select ‘ADD JAR/Folder..’. This will open to a new screen where you can select which JAR files to import to Netbeans. Navigate to the folder where you have stored all ROSJava files. 
+In Netbeans, in the sami-crw folder (and possibly the sami-core if it has unmet dependencies and won't build) in the ‘Project’ tab, select ‘Libraries’. Right click on ‘Libraries’ and select ‘ADD JAR/Folder..’. This will open to a new screen where you can select which JAR files to import to Netbeans. Navigate to the folder where you have stored all ROSJava files. 
 The folder which will contain the necessary JAR files for the standard ROSJava edition is:
 /rosjava/src/rocon_rosjava_core/master_info/build/install/master_info/lib
 
@@ -99,6 +99,9 @@ To import the geography messages JAR into Netbeans, following the same method as
 Import the following JAR file: 
 
 - geographic_msgs-0.4.0.jar
+
+Repeat the process for the sensor messages jar (in /rosjava/build/sensor_msgs/build/libs):
+
 - sensor_msgs-1.11.8.jar
 
 Test the ROSJava coupled Sami-crw software

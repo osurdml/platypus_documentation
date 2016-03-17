@@ -1,7 +1,3 @@
-.. Platypus Lutra Documentation documentation master file, created by
-   sphinx-quickstart on Fri Jul 24 15:23:32 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
 Setup and launch of the sami-crw software
 ==========================================
@@ -9,39 +5,36 @@ Setup and launch of the sami-crw software
 Installing the Software
 -----------------------
 
-1.	Download sami-core and sami-dreaam from the github repositories::
+1. Download sami-core and sami-dreaam from the github repositories
+   
+   ::
 
-   $ git clone https://github.com/nbbrooks/sami-core.git 
-   $ git clone https://github.com/nbbrooks/sami-dreaam.git 
-   $ git clone https://github.com/nrjl/sami-crw.git 
+    $ git clone https://github.com/nbbrooks/sami-core.git 
+    $ git clone https://github.com/nbbrooks/sami-dreaam.git 
+    $ git clone https://github.com/nrjl/sami-crw.git
 
-2.	Install the latest version of Netbeans  and Java 1.8.  You can get Netbeans and Java as a bundle from Oracle (this will ensure automatically you will be running the 1.8 JDK with Netbeans): http://www.oracle.com/technetwork/articles/javase/jdk-netbeans-jsp-142931.html
 
+2. Install the latest version of Netbeans  and Java 1.8.  You can get Netbeans and Java as a bundle from Oracle (this will ensure automatically you will be running the 1.8 JDK with Netbeans): http://www.oracle.com/technetwork/articles/javase/jdk-netbeans-jsp-142931.html
 
 
 3.	 Add all three projects to Netbeans NOTE: You will need to copy and rename the “nbproject-template” folder in each the sami-core, sami-dreaam, and sami-crw folders to get these to work as projects in Netbeans. Copy the “nbproject-template” folder into each of these files home directories and rename it “nbproject”
 
 
-
 4.	Make sure that Netbeans is using Java 1.8. The sami-dreaam project will not compile with an earlier version of the JDK! 
 
 
-
 5.	To be safe build the sami-core project first Then build the sami-dreaam project then the sami-crw (sami-crw is dependent upon the other two projects)
-
 
 
 6.	Run the sami-crw from Netbeans to launch the application
 
     Make sure the run setup is as follows:
 
-    The main class: 
-    sami.ui.MissionMonitor
+    * Main class:    sami.ui.MissionMonitor
 
-    The VM options:
-    -Djava.util.logging.config.file="logging.properties" -Djava.library.path=lib/input
+    * VM options:   -Djava.util.logging.config.file="logging.properties" -Djava.library.path=lib/input
 
-    NOTE: To change the 'run' setup of the program in Netbeans, select the sami-crw project on the main projects window, right click and select 'Properties.' This will open a new dialogue box. On the menu in this box, select 'Run.' Use the above parameters to configure the run setup. 
+.. note:: To change the 'run' setup of the program in Netbeans, select the sami-crw project on the main projects window, right click and select 'Properties.' This will open a new dialogue box. On the menu in this box, select 'Run.' Use the above parameters to configure the run setup. 
 
 
 Starting the boat
@@ -49,33 +42,29 @@ Starting the boat
 
 First make sure you have successfully turned on the boat, connected the phone, and are able to get GPS, following the procedure for boat startup:
 
-Plug in the battery, minimum voltage is 9V
+1. Plug in the battery, minimum voltage is 9V
 
-Press the white button
+2. Press the white button, the some lights should turn on and the board will beep a couple of times
 
-There has to be a plane connection for esc beeps
+3. Ensure phone is connected to correct wifi network, then start ``OSU Lutra`` app
 
-Start App
+4. Click "off" which turns it "on"
 
-Click "off" which turns it "on"
+5. Note phone UDP: 10.214.152.186:11411 (this IP corresponds to the robotics network, the IP will vary depending upon the shared network)
 
-Note phone UDP: 10.214.152.186:11411 (this IP corresponds to the robotics network, the IP will vary depending upon the shared network)
+6. Test thrust with debug button and thrust slider 
 
-Test thrust with debug button and thrust slider 
+7. Test GPS lock by operating Google Maps
 
-Test GPS lock by operating Google Maps
-
-Close up electronics Bay – get ready for deployment
-
-Also, make sure both the phone and the computer are connected to the same network. 
+8. Close up electronics Bay – get ready for deployment
 
 
 Launching the Sami-Crw software and Connecting the Boat
 --------------------------------------------------------
 
-NOTE: When running the software from Netbeans for the first time, you will be prompted to select a .drm file. By default this .drm file is located in the sami-crw/plans folder. Navigate to this folder and select the .drm file. 
+.. note:: When running the software from Netbeans for the first time, you will be prompted to select a .drm file. By default this .drm file is located in the sami-crw/plans folder. Navigate to this folder and select the .drm file. 
 
-NOTE: Again when running the software for the first time if the OperatorInteractionFrame does not load initially, in the Mission Monitor window, select Load Domain. You will be prompted to select a .dcf file. Navigate to sami-crw/config and select the current version’s crw.dcf file. 
+.. note:: Again when running the software for the first time if the OperatorInteractionFrame does not load initially, in the Mission Monitor window, select Load Domain. You will be prompted to select a .dcf file. Navigate to sami-crw/config and select the current version’s crw.dcf file. 
 
 Once the software is launched from Netbeans, you should see 8 frames open. You can use the FrameManager to save the desired placement of these frames. The 8 frames are: OperatorInteractionFrame, MapFrame, AllocationFrame, CommFrame, Mission Monitor, Message Frame, InterruptFrame. 
 
@@ -98,9 +87,4 @@ Updating the Boat Firmware
 The following guide from the manufacturer is the process for restoring or updating the boat firmware:
 
 See :download:`this guide <../source/PlatypusArduinoFirmwareUpdateGuide.pdf>`.
-
-.. toctree::
-   :maxdepth: 2
-
-
 
