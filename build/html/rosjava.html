@@ -86,6 +86,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#installing-rosjava">Installing ROSJava</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#importing-packages-into-netbeans">Importing Packages into Netbeans</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#test-the-rosjava-coupled-sami-crw-software">Test the ROSJava coupled Sami-crw software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-code">Python Code</a></li>
 </ul>
 </li>
 </ul>
@@ -214,6 +215,7 @@ $ genjava_message_artifacts --verbose
 <p>Import the following JAR file:</p>
 <ul class="simple">
 <li>geographic_msgs-0.4.0.jar</li>
+<li>sensor_msgs-1.11.8.jar</li>
 </ul>
 </div>
 <div class="section" id="test-the-rosjava-coupled-sami-crw-software">
@@ -224,7 +226,10 @@ $ genjava_message_artifacts --verbose
 You should see the following:
 /crw_waypoint_sub
 /crw_geopose_pub
+/crw_waypoint_reached
 /clear_waypoints
+/crw_sonar_pub
+/crw_temp_pub
 /rosout
 /rousout_agg</p>
 <p>Then try in a terminal window:</p>
@@ -239,6 +244,12 @@ You should see the following:
 </pre></div>
 </div>
 <p>This will publish 1 message of type String to the /clear_waypoints topic. It will stop the boat on its course to the current waypoint.</p>
+</div>
+<div class="section" id="python-code">
+<h2>Python Code<a class="headerlink" href="#python-code" title="Permalink to this headline">¶</a></h2>
+<p>There is some simple python code demonstrating use of the ROS messages available by cloning::
+git clone <a class="reference external" href="https://github.com/nrjl/ros_lutra.git">https://github.com/nrjl/ros_lutra.git</a></p>
+<p>The simplest example code is in scripts/box_waypoints.py. This code just runs a loop that allows a user to send the robot a set of four waypoints forming 20m box from its current position, or cancel the current waypoint or all waypoints. The sonar_plot.py code uses data from the sonar to create ROS marker messages to plot sonar returns so that you can use RVIZ to visualise the robot and sonar.</p>
 </div>
 </div>
 

@@ -99,6 +99,7 @@ To import the geography messages JAR into Netbeans, following the same method as
 Import the following JAR file: 
 
 - geographic_msgs-0.4.0.jar
+- sensor_msgs-1.11.8.jar
 
 Test the ROSJava coupled Sami-crw software
 ------------------------------------------
@@ -112,7 +113,10 @@ First check that the Publisher and Subscriber node have been declared and instan
 You should see the following:
 /crw_waypoint_sub
 /crw_geopose_pub
+/crw_waypoint_reached
 /clear_waypoints
+/crw_sonar_pub
+/crw_temp_pub
 /rosout
 /rousout_agg
 
@@ -129,3 +133,11 @@ To clear this waypoint, type the following::
 $ rostopic pub -1 /clear_waypoints std_msgs/String ‘clear’
 
 This will publish 1 message of type String to the /clear_waypoints topic. It will stop the boat on its course to the current waypoint.
+
+Python Code
+-----------
+
+There is some simple python code demonstrating use of the ROS messages available by cloning::
+git clone https://github.com/nrjl/ros_lutra.git
+
+The simplest example code is in scripts/box_waypoints.py. This code just runs a loop that allows a user to send the robot a set of four waypoints forming 20m box from its current position, or cancel the current waypoint or all waypoints. The sonar_plot.py code uses data from the sonar to create ROS marker messages to plot sonar returns so that you can use RVIZ to visualise the robot and sonar.
