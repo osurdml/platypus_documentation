@@ -11,9 +11,9 @@ Installing the Software
 
 1.	Download sami-core and sami-dreaam from the github repositories::
 
-    $ git clone https://github.com/nbbrooks/sami-core.git 
-    $ git clone https://github.com/nbbrooks/sami-dream.git 
-    $ git clone https://github.com/nrjl/sami-crw.git 
+    git clone https://github.com/nbbrooks/sami-core.git 
+    git clone https://github.com/nbbrooks/sami-dream.git 
+    git clone https://github.com/nrjl/sami-crw.git 
 
 2.	Install the latest version of Netbeans  and Java 1.8.  You can get Netbeans and Java as a bundle from Oracle (this will ensure automatically you will be running the 1.8 JDK with Netbeans): http://www.oracle.com/technetwork/articles/javase/jdk-netbeans-jsp-142931.html
 
