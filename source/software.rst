@@ -80,6 +80,7 @@ Double click on name (ie “boat”) in the CommFrame to get the Teleop Path, Po
 
 Select the Teleop button.  A menu option should now display in the Map Frame with a options for gains on the right side and a red graphic on the left. The red dot controls the motors. Dragging it up will thrust both motors. Dragging it left or right will activate the right and left motors respectively (as seen from the stern), acting as a rudder. 
 
+.. image:: ../fig/lutra.JPG
 
 Updating the Boat Firmware
 --------------------------

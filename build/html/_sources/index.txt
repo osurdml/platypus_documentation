@@ -3,13 +3,18 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Platypus Lutra's documentation!
-==========================================
+Documentation for RDML's Playtypus Lutra ASV
+============================================
+
+This page contains documentation for the Platypus Lutra vehicle at the `Robot Decision Making Laboratory <http://research.engr.oregonstate.edu/rdml/>`_ at Oregon State. The vehicle has been apated slightly from tha manufacturer, primarily in software to provide a `ROS <http://wiki.ros.org/>`_ interface for planning algorithms. We currently have access to boat position, waypoint status and sensor (temperature and sonar depth) measurements  as well as being able to command waypoints through the ROS interface.
+
+.. image:: ../fig/lutra1.jpg
+
 
 The Platypus Lutra is a low-cost platform developed by Sense Platypus. More information about the manufacturer can be found here: http://senseplatypus.com/Solutions/hardware.html. 
 
 
-The main documentation for the site is organized into a couple sections:
+The main documentation for the site is organized into the following sections:
 
 .. toctree::
    :maxdepth: 2
